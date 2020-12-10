@@ -26,14 +26,10 @@
 // // console.log(checkForSpam("Get best sale offers now!"));
 // // console.log(checkForSpam("Amazing SalE, only tonight!"));
 
-
 // function getExtremeElements(array) {
-    // Пиши код ниже этой строки
-    
-  
+// Пиши код ниже этой строки
 
-
-  //   return console.log(array);
+//   return console.log(array);
 //   const deletedArray = array.splice(1, array.length - 2);
 //   console.log(deletedArray);
 //   console.log(array);
@@ -60,7 +56,6 @@
 //   console.log(words);
 // }
 
-
 // console.log(splitMessage("Манго спешит на поезд", " "));
 
 // function slugify(title) {
@@ -73,14 +68,12 @@
 //   slug = array.join('-')
 //    console.log(slug);
 //   return slug;
- 
+
 //   // Пиши код выше этой строки
 // }
 
-
 // slugify("Массивы для новичков");
 // console.log(slugify("Массивы для новичков"));
-
 
 // function makeArray(firstArray, secondArray, maxLength) {
 //   // Пиши код ниже этой строки
@@ -128,7 +121,6 @@
 // calculateTotal(103);
 // console.log(calculateTotal(103));
 
-
 // const fruits = ["яблоко", "слива", "груша", "апельсин"];
 
 // for (let i = 0; i < fruits.length; i += 1) {
@@ -136,7 +128,6 @@
 //   const fruit = fruits[i]; // Дополни эту строку
 //   console.log(fruit);
 // }
-
 
 // function calculateTotalPrice(order) {
 //   let total = 0;
@@ -154,46 +145,39 @@
 // calculateTotalPrice([412, 371, 94, 63, 176]);
 // calculateTotalPrice([28, 361, 4, 99, 76]);
 
-
 // function findLongestWord(string) {
 //   // Пиши код ниже этой строки
 //   const array = string.split(' ');
-  
+
 //   let longestWord = array[0];
-  
+
 //   for (let i = 1; i < array.length; i += 1) {
 //     if (array[i].length > longestWord.length) {
 //       longestWord = array[i];
 //     }
-  
-    
-  
 
 //     // Пиши код выше этой строки
 //   }
 //   return longestWord;
 // }
 
-
 // findLongestWord('The quick brown fox  jumped over the lazy dog')
 // console.log(findLongestWord("The quick brown fox  jumped over the lazy dog"));
 
+// function createArrayOfNumbers(min, max) {
+//   const numbers = [];
+//   // Пиши код ниже этой строки
+//   for (let i = min; i <= max; i += 1) {
+//     numbers.push(numbers[i])
 
-function createArrayOfNumbers(min, max) {
-  const numbers = [];
-  // Пиши код ниже этой строки
-  for (let i = min; i <= max; i += 1) {
-    numbers.push(numbers[i])
-        
-  }
-  // Пиши код выше этой строки
-  return numbers;
-}
+//   }
+//   // Пиши код выше этой строки
+//   return numbers;
+// }
 
-console.log(createArrayOfNumbers(1, 3))
+// console.log(createArrayOfNumbers(1, 3))
 
-console.log(createArrayOfNumbers(14, 17));
-
+// console.log(createArrayOfNumbers(14, 17));
 
 // function createArrayOfNumbers(min, max) {
 //   const numbers = [];
@@ -203,9 +187,107 @@ console.log(createArrayOfNumbers(14, 17));
 //     // Пиши код выше этой строки
 //     return numbers;
 //   }
-  
+
 // }
 
 // console.log(createArrayOfNumbers(1, 3))
 
 // console.log(createArrayOfNumbers(14, 17));
+
+// function filterArray(numbers, value) {
+//   // Пиши код ниже этой строки
+//   let filtered = [];
+//   for (const number of numbers) {
+//     console.log(number);
+
+//     if (number > value) {
+//       filtered.push(number);
+//     }
+//   }
+
+//   return filtered;
+
+//   // Пиши код выше этой строки
+// }
+
+// console.log(filterArray([1, 2, 3, 4, 5], 3));
+
+// function filterArray(numbers, value) {
+//   // Пиши код ниже этой строки
+//   let filtered = [];
+//   for (let i = 0; i < numbers.length; i += 1) {
+
+//     if (numbers[i] > value) {
+//       filtered.push(numbers[i]);
+//     }
+//   }
+//   return filtered;
+//   // Пиши код выше этой строки
+// }
+
+// function checkFruit(fruit) {
+//   const fruits = ["яблоко", "слива", "груша", "апельсин"];
+
+//   return fruits.includes(fruit); // Дополни эту строку
+// }
+
+// checkFruit("слива");
+
+// console.log(checkFruit("Груша"));
+
+// function getCommonElements(array1, array2) {
+  // Пиши код ниже этой строки
+
+//   const array3 = [];
+
+//   for (let array of array1) {
+//     if (array2.includes(array)) {
+//       array3.push(array);
+//     }
+//   }
+
+//   return array3;
+//   // Пиши код выше этой строки
+// }
+
+// console.log(getCommonElements([1, 2, 3], [2, 1, 17, 19]));
+
+
+// function getEvenNumbers(start, end) {
+//   // Пиши код ниже этой строки
+//   const array = [];
+
+//   for (let i = start; i <= end; i += 1) {
+//     if (i % 2 === 0) {
+//       array.push(i);
+//     }
+//   }
+
+//   return array;
+//   // Пиши код выше этой строки
+// }
+
+
+function includes(array, value) {
+  // Пиши код ниже этой строки
+
+  const isInclude = true;
+  for (const item of array) {
+    if (item === value) {
+      return isInclude;
+    } 
+  }
+
+  return !isInclude;
+
+  // Пиши код выше этой строки
+}
+
+console.log(includes([1, 2, 3, 4, 5], 3));
+console.log(includes([1, 2, 3, 4, 5], 17));
+console.log(
+  includes(["Земля", "Марс", "Венера", "Юпитер", "Сатурн"], "Юпитер")
+);
+console.log(includes(["Земля", "Марс", "Венера", "Юпитер", "Сатурн"], "Уран"));
+console.log(includes(["яблоко", "слива", "груша", "апельсин"], "слива"));
+console.log(includes(["яблоко", "слива", "груша", "апельсин"], "киви"));
