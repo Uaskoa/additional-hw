@@ -9,13 +9,11 @@
 // // Пиши код ниже этой строки
 // const keys = Object.keys(apartment);
 
-
 // for (const key of keys) {
 //   console.log(apartment[key]);
 //   values.push(apartment[key]);
 // }
 // console.log(values);
-
 
 ////////////////////////////////////////////////////////////////////No14
 // function countProps(object) {
@@ -348,36 +346,58 @@ const atTheOldToad = {
     }
 
     this.potions.push(potionName);
-    
   },
 
   removePotion(potionName) {
-    const potionIndex = this.potions.indexOf(potionName);
-    console.log(potionIndex);
+    let potionIndex = 0;
+
     for (const potion of this.potions) {
-      console.log(potion)
-       console.log(this.potions.indexOf(potion));
-      if (potionIndex === -1 ) {
-        return `Зелья ${potionName} нет в инвентаре!`;
+      if (potion.name === potionName) {
+        this.potions.splice(potionIndex, 1);
+        return this.potions;
       }
+      potionIndex += 1;
     }
 
-    this.potions.splice(potionIndex, 1);
+    return `Зелья ${potionName} нет в инвентаре!`;
   },
-  updatePotionName(oldName, newName) {
-    const potionIndex = this.potions.indexOf(oldName);
 
-    if (potionIndex === -1) {
-      return `Зелья ${oldName} нет в инвентаре!`;
+  // removePotion(potionName) {
+  //   for (const potion of this.potions) {
+  //     if (potion.name === potionName) {
+  //       const potionIndex = this.potions.indexOf(potion);
+  //       this.potions.splice(potionIndex, 1);
+  //       return `Зелье ${potionName} удалено!`;
+  //     }
+  //   }
+  //   return `Зелья ${potionName} нет в инвентаре!`;
+  // },
+
+  updatePotionName(oldName, newName) {
+    
+
+    for (const potion of this.potions) {
+      // console.log(potion);
+
+      if (potion.name === oldName) {
+        potion.name = newName;
+        console.log(potion.name);
+
+        return this.potions;
+      }
+     
     }
 
-    this.potions.splice(potionIndex, 1, newName);
+    return `Зелья ${oldName} нет в инвентаре!`;
   },
   // Пиши код выше этой строки
 };
 
-console.log(atTheOldToad.getPotions());
-atTheOldToad.addPotion({ name: "Невидимка", price: 620 });
-console.log(atTheOldToad.getPotions());
-atTheOldToad.removePotion("Дыхание дракона");
+// console.log(atTheOldToad.getPotions());
+// atTheOldToad.addPotion({ name: "Невидимка", price: 620 });
+// console.log(atTheOldToad.getPotions());
+//atTheOldToad.removePotion("Дыхание дракона");
+// console.log(atTheOldToad.removePotion("Дыхание дракона"));
+atTheOldToad.updatePotionName("Дыхание дракона", "Полиморф");
+// console.log(atTheOldToad.updatePotionName("Дыхание дракона", "Полиморф"));
 console.log(atTheOldToad.getPotions());
