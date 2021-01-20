@@ -236,7 +236,7 @@
 // console.log(checkFruit("Груша"));
 
 // function getCommonElements(array1, array2) {
-  // Пиши код ниже этой строки
+  
 
 //   const array3 = [];
 
