@@ -171,33 +171,135 @@
 
 /////////////////////////// No 4 //////////////////////////////
 
-const pizzaPalace = {
-  pizzas: ["Ультрасыр", "Аль Копчино", "Четыре нарезона"],
-  order(pizzaName) {
-    if (!this.pizzas.includes(pizzaName)) { 
-      onOrderError(`В ассортименте нет пиццы с названием ${this.pizzaName}.`);
-      return
-    }
-      
-    makePizza
-      
-  },
-};
-// Пиши код выше этой строки
+// const pizzaPalace = {
+//   pizzas: ["Ультрасыр", "Аль Копчино", "Четыре нарезона"],
+//   order(pizzaName, onSuccess, onError) {
+//     //pizzaName = 
+//     if (this.pizzas.includes(pizzaName)) {
+//       return onSuccess(pizzaName);
+//     }
+//     return onOrderError(pizzaName);
+//   },
+// };
+// // Пиши код выше этой строки
 
-// Колбэк для onSuccess
-function makePizza(pizzaName) {
-  return `Ваш заказ принят. Готовим пиццу ${pizzaName}.`;
-}
+// // Колбэк для onSuccess
+// function makePizza(pizzaName) {
+//   return `Ваш заказ принят. Готовим пиццу ${pizzaName}.`;
+// }
 
-// Колбэк для onError
-function onOrderError(error) {
-  return `Ошибка! ${error}`;
-}
+// // Колбэк для onError
+// function onOrderError(error) {
+//   return `Ошибка! В ассортименте нет пиццы с названием ${error}.`;
+// }
 
 // Вызовы метода с колбэками
-pizzaPalace.order("Аль Копчино", makePizza, onOrderError);
-pizzaPalace.order("Четыре нарезона", makePizza, onOrderError);
-pizzaPalace.order("Биг майк", makePizza, onOrderError);
-pizzaPalace.order("Венская", makePizza, onOrderError);
+// pizzaPalace.order("Аль Копчино", makePizza, onOrderError);
+// pizzaPalace.order("Четыре нарезона", makePizza, onOrderError);
+// pizzaPalace.order("Биг майк", makePizza, onOrderError);
+// pizzaPalace.order("Венская", makePizza, onOrderError);
 
+// console.log(pizzaPalace.order("Аль Копчино", makePizza, onOrderError));
+// console.log(pizzaPalace.order("Четыре нарезона", makePizza, onOrderError));
+// console.log(pizzaPalace.order("Биг майк", makePizza, onOrderError));
+// console.log(pizzaPalace.order("Венская", makePizza, onOrderError));
+
+
+/////////////////////////// No 5 //////////////////////////////
+
+// const pizzaPalace = {
+//   pizzas: ["Ультрасыр", "Аль Копчино", "Четыре нарезона"],
+//   // Пиши код ниже этой строки
+//   checkPizza(pizzaName) {
+//     return this.pizzas.includes(pizzaName);
+//   },
+//   order(pizzaName) {
+//     const isPizzaAvailable = this.checkPizza(pizzaName);
+
+//     if (!isPizzaAvailable) {
+//       return `В ассортименте нет пиццы с названием «${pizzaName}».`;
+//     }
+
+//     return `Заказ принят, готовим пиццу «${pizzaName}».`;
+//   },
+//   // Пиши код выше этой строки
+// };
+
+// console.log(pizzaPalace.order("Аль Копчино"));
+// console.log(pizzaPalace.order("Четыре нарезона"));
+// console.log(pizzaPalace.order("Биг майк"));
+// console.log(pizzaPalace.order("Венская"));
+
+
+/////////////////////////// No 6 //////////////////////////////
+
+// const customer = {
+//   username: 'Mango',
+//   balance: 24000,
+//   discount: 0.1,
+//   orders: ['Burger', 'Pizza', 'Salad'],
+//   // Пиши код ниже этой строки
+//   getBalance() {
+//     return this.balance;
+//   },
+//   getDiscount() {
+//     return this.discount;
+//   },
+//   setDiscount(value) {
+//     this.discount = value;
+//   },
+//   getOrders() {
+//     return this.orders;
+//   },
+//   addOrder(cost, order) {
+//     this.balance -= cost - cost * this.discount;
+//     this.orders.push(order);
+//   },
+//   // Пиши код выше этой строки
+// };
+
+// customer.setDiscount(0.15);
+// console.log(customer.getDiscount()); // 0.15
+// customer.addOrder(5000, 'Steak');
+// console.log(customer.getBalance()); // 19750
+// console.log(customer.getOrders()); // ['Burger', 'Pizza', 'Salad', 'Steak']
+
+/////////////////////////// No 7 //////////////////////////////
+const orders = [
+  { email: "solomon@topmail.ua", dish: "Burger" },
+  { email: "artemis@coldmail.net", dish: "Pizza" },
+  { email: "jacob@mail.com", dish: "Taco" },
+];
+
+// Пиши код ниже этой строки
+function composeMessage(position) {
+
+  
+  for (const order of orders) {
+     if (position === orders.indexOf(order) - 1) {
+      
+    
+   }
+  }
+        return `Готовим ${this[position - 1].dish} 
+     для ${this[position - 1].email}. 
+  Ваш заказ ${position}-й в очереди.`;
+}
+
+const messages = (orders, composeMessage) =>
+  orders.map((order) => composeMessage);
+
+
+
+console.log(composeMessage.call(orders, 3));
+console.log(messages);
+
+
+// const getUsersWithGender = (users, gender) =>
+//   users
+//     .filter((user) => {
+//       if (user.gender === gender) {
+//         return user;
+//       }
+//     })
+//     .map((user) => user.name);
