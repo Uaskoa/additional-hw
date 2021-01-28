@@ -272,27 +272,43 @@ const orders = [
 ];
 
 // Пиши код ниже этой строки
-function composeMessage(position) {
+// function composeMessage(position) {
 
   
-  for (const order of orders) {
-     if (position === orders.indexOf(order) - 1) {
+//   for (const order of orders) {
+//      if (position === orders.indexOf(order) - 1) {
       
     
-   }
-  }
-        return `Готовим ${this[position - 1].dish} 
-     для ${this[position - 1].email}. 
-  Ваш заказ ${position}-й в очереди.`;
+//    }
+//   }
+//         return `Готовим ${this[position - 1].dish} 
+//      для ${this[position - 1].email}. 
+//   Ваш заказ ${position}-й в очереди.`;
+// }
+
+// const messages = orders.map((order, position) => composeMessage.call(order, position -=1));
+
+
+// const messages = orders.map((order, index) =>
+//   composeMessage.call(order, (index += 1))
+// );
+
+
+function composeMessage(position) {
+  return `Готовим ${this.dish} для ${this.email}. Ваш заказ ${position}-й в очереди.`;
 }
 
-const messages = (orders, composeMessage) =>
-  orders.map((order) => composeMessage);
 
+const messages = orders.map((order, index) =>
+  composeMessage.call(order, (index += 1))
+);
 
-
-console.log(composeMessage.call(orders, 3));
 console.log(messages);
+
+console.log(composeMessage.call(orders, 2));
+// console.log(messages);
+
+
 
 
 // const getUsersWithGender = (users, gender) =>
