@@ -59,8 +59,6 @@
 
 //////////////////////////////// №6 ////////////////////////
 
-
-
 // const calculateTotalPrice = (orderedItems) => {
 //   let totalPrice = 0;
 
@@ -70,7 +68,6 @@
 
 //   return totalPrice;
 // };
-
 
 //////////////////////////////// №7 ////////////////////////
 
@@ -83,32 +80,28 @@
 //     }
 //   });
 
- 
 //   return filteredNumbers;
 // };
 
 //////////////////////////////// №8 ////////////////////////
 
-
 // const getCommonElements = (firstArray, secondArray) => {
 //     const commonElements = [];
-  
+
 //     firstArray.forEach((element) => {
 //       if (secondArray.includes(element)) {
 //         commonElements.push(element);
 //       }
 //     });
-  
+
 //     return commonElements;
 // }
-  
+
 //////////////////////////////// №9 ////////////////////////
 
-
 // function changeEven(numbers, value) {
-    
-//     const newArray = [];
 
+//     const newArray = [];
 
 //     numbers.forEach((number) => {
 //         number % 2 === 0 ? newArray.push(number + value) : newArray.push(number)
@@ -117,10 +110,8 @@
 
 //     return newArray
 // }
-      
-   
-// console.log(changeEven([1, 2, 3, 4, 5], 10));
 
+// console.log(changeEven([1, 2, 3, 4, 5], 10));
 
 //////////////////////////////// №10 ////////////////////////
 
@@ -140,10 +131,7 @@
 
 // const titles = books.map((book) => book.title);
 
-
-
 //////////////////////////////// №12 ////////////////////////
-
 
 // const books = [
 //   {
@@ -174,22 +162,21 @@
 // const getUserNames = users => users.map(user => user.name)
 //   // Пиши код выше этой строки
 
-  //////////////////////////////// №14 ////////////////////////
+//////////////////////////////// №14 ////////////////////////
 
 //   // Пиши код ниже этой строки
 // const getUserEmails = users => users.map(user => user.email)
 //   // Пиши код выше этой строки
 
- //////////////////////////////// №15 ////////////////////////
+//////////////////////////////// №15 ////////////////////////
 
 //  const numbers = [17, 24, 82, 61, 36, 18, 47, 52, 73];
 //  // Пиши код ниже этой строки
 
 //  const evenNumbers = numbers.filter((number) => number % 2 === 0);
 // const oddNumbers = numbers.filter((number) => number % 2 !== 0);
- 
 
- //////////////////////////////// №16 ////////////////////////
+//////////////////////////////// №16 ////////////////////////
 
 //  const books = [
 //    {
@@ -214,7 +201,6 @@
 //    (genre, index, array) => array.indexOf(genre) === index
 //  );
 
-
 //////////////////////////////// №17 ////////////////////////
 
 // const books = [
@@ -232,25 +218,22 @@
 // const topRatedBooks = books.filter((book) => book.rating >= MIN_RATING);
 // const booksByAuthor = books.filter((book) => book.author === AUTHOR);
 
-
 //////////////////////////////// №18 ////////////////////////
 
 // Пиши код ниже этой строки
 // const getUsersWithEyeColor = (users, color) => users.filter(user => (user.eyeColor === color));
 // Пиши код выше этой строки
 
-
-
 //////////////////////////////// №19 ////////////////////////
 
 // const getUsersWithAge = (users, minAge, maxAge) =>
 //     users.filter((user) => user.age >= minAge && user.age <= maxAge);
-  
+
 //////////////////////////////// №20 ////////////////////////
 
 // const getUsersWithFriend = (users, friendName) =>
 //     users.filter((user) => user.friends.includes(friendName));
-  
+
 //////////////////////////////// №21 ////////////////////////
 
 const users = [
@@ -326,7 +309,9 @@ const users = [
   },
 ];
 
-const getFriends = (users) => { users.map(user => user.friends) }
+console.log(users);
+const getFriends = users.flatMap((user) => user.friends)
 
+console.log(getFriends);
 
-console.log(getFriends());
+const getUniqueFriend = (getFriends, friendName) => getFriends.filter((getFriend =>))
