@@ -317,11 +317,82 @@
 
 //////////////////////////////// №22////////////////////////
 
-const getActiveUsers = users.filter(user => user.isActive)
+// const getActiveUsers = users.filter(user => user.isActive)
 
 //////////////////////////////// №23////////////////////////
 
-const getActiveUsers = users.filter(user => !user.isActive)
+// const getActiveUsers = users.filter(user => !user.isActive)
+
+
+//////////////////////////////// №24////////////////////////
+
+// const bookWithTitle = books.find((book) => book.title === BOOK_TITLE);
+// const bookByAuthor = books.find((book) => book.author === AUTHOR);
+
+
+
+////////////////////////////// №25////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// const getUserWithEmail = (users, email) =>
+//   users.find((user) => user.email === email);
+
+
+
+////////////////////////////// №26////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// const eachElementInFirstIsEven = firstArray.every((num) => num % 2 === 0);
+// const eachElementInFirstIsOdd = firstArray.every((num) => num % 2 !== 0);
+
+// const eachElementInSecondIsEven = secondArray.every((num) => num % 2 === 0);
+// const eachElementInSecondIsOdd = secondArray.every((num) => num % 2 !== 0);
+
+// const eachElementInThirdIsEven = thirdArray.every((num) => num % 2 === 0);
+// const eachElementInThirdIsOdd = thirdArray.every((num) => num % 2 !== 0);
+
+////////////////////////////// №27////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// const isEveryUserActive = (users) => users.every((user) => user.isActive);
+
+
+////////////////////////////// №28////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// const anyElementInFirstIsEven = firstArray.some((num) => num % 2 === 0);
+// const anyElementInFirstIsOdd = firstArray.some((num) => num % 2 !== 0);
+
+// const anyElementInSecondIsEven = secondArray.some((num) => num % 2 === 0);
+// const anyElementInSecondIsOdd = secondArray.some((num) => num % 2 !== 0);
+
+// const anyElementInThirdIsEven = thirdArray.some((num) => num % 2 === 0);
+// const anyElementInThirdIsOdd = thirdArray.some((num) => num % 2 !== 0);
+
+
+////////////////////////////// №29////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// const isAnyUserActive = (users) => users.some((user) => user.isActive);
+
+
+////////////////////////////// №30////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// const players = {
+//   mango: 1270,
+//   poly: 468,
+//   ajax: 710,
+//   kiwi: 244,
+// };
+// const playtimes = Object.values(players); // [1270, 468, 710, 244]
+// // Пиши код ниже этой строки
+
+// const totalPlayTime = playtimes.reduce((acc, value) => acc + value, 0);
+
+// // Пиши код выше этой строки
+// const averagePlayTime = totalPlayTime / playtimes.length;
+
+
+////////////////////////////// №31////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// const totalAveragePlaytimePerGame = players.reduce(
+//   (acc, player) => acc + player.playtime / player.gamesPlayed,
+//   0
+// );
 
 
 //////////////////////////////// №32 ////////////////////////
